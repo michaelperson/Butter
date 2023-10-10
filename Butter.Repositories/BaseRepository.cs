@@ -1,5 +1,6 @@
 ﻿using Butter.DataAccess;
 using Butter.Repositories.Interfaces;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,14 +18,21 @@ namespace Butter.Repositories
     public abstract class BaseRepository<M,T, U> : IRepo<M,T, U>
         where T:class         
     {
+         
+        private readonly ButterContext _ctx;
+        public BaseRepository(string cnstr)
+        {
+            _ctx = new ButterContext(cnstr);
+        }
+
+
         /// <summary>
         /// Permet de récupérer tous les enregistrement dans la Db
         /// </summary>
         /// <returns>un <see cref="IEnumerable{T}"/> contenant les données</returns>
         public IEnumerable<M> Get()
         {
-            //1 J'ai besoin de mon context
-            ButterContext _ctx = new ButterContext();
+            
             // Récupérer la collection de données
             return _ctx.Set<T>().ToList().Select(s=> ToModel(s)).AsEnumerable<M>();
 
@@ -38,8 +46,7 @@ namespace Butter.Repositories
         /// <returns>une instance de T ou NULL</returns>
         public M GetById(U id)
         {
-            //1 J'ai besoin de mon context
-            ButterContext _ctx = new ButterContext();
+             
             // Récupérer la collection de données
             return ToModel(_ctx.Set<T>().Find(id));
 
@@ -51,8 +58,7 @@ namespace Butter.Repositories
         /// <param name="item">L'entité à ajouter</param>
         public void Add(M item)
         {
-            //1 J'ai besoin de mon context
-            ButterContext _ctx = new ButterContext();
+           
             //2 Ajouter mon item dans le dbset correspondant
             _ctx.Set<T>().Add(ToEntite(item));
             //3 Save
@@ -65,8 +71,7 @@ namespace Butter.Repositories
         /// <param name="id">l'identifiant de l'élément a supprimer</param>
         public void Delete(U id)
         {
-            //1 J'ai besoin de mon context
-            ButterContext _ctx = new ButterContext();
+             
             //1.1 Retrouver l'item correspondant
             T item = _ctx.Set<T>().Find(id);
             //2 Supprimer mon item dans le dbset correspondant
@@ -82,8 +87,7 @@ namespace Butter.Repositories
         /// <param name="item">L'entité a mettre à jour</param>
         public void Update(M item)
         {
-            //1 J'ai besoin de mon context
-            ButterContext _ctx = new ButterContext();
+            
             //2 MAJ mon item dans le dbset correspondant
             _ctx.Set<T>().Update(ToEntite(item));
             //3 Save

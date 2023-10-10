@@ -10,6 +10,7 @@
         public DateTime BirthDate { get; set; }
         public string Town { get; set; }
 
+        public string Genre { get; set; }
          
         //Amis
         public ICollection<FriendEntity> MyFriends { get; set; }

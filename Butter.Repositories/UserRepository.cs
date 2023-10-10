@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 
 namespace Butter.Repositories
 {
-    public class UserRepository : BaseRepository<UserModel, UserEntity, int>
+    public class UserRepository : BaseRepository<UserModel, UserEntity, int>, IUserRepository
     {
+        public UserRepository(string cnstr) : base(cnstr)
+        {
+        }
+
         public override UserEntity ToEntite(UserModel Model)
         {
             if (Model == null) return null;

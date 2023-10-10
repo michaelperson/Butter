@@ -41,8 +41,13 @@ namespace Butter.DataAccess.Configs
                 .HasColumnType("nvarchar")
                 .HasMaxLength(250);
 
+            builder.Property(u => u.Genre)
+                .IsRequired()
+                .HasColumnType("nvarchar")
+                .HasMaxLength(254);
+
             //relations zamis 
-           
+
 
         }
     }
