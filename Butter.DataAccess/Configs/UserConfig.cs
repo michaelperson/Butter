@@ -13,6 +13,7 @@ namespace Butter.DataAccess.Configs
     {
         public void Configure(EntityTypeBuilder<UserEntity> builder)
         {
+            builder.ToTable("Users");
             builder.HasKey(u => u.UserId)
                    .IsClustered();
 

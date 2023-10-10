@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Butter.Entities", "Butter.E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Butter.Repositories", "Butter.Repositories\Butter.Repositories.csproj", "{0C201B54-B8BC-451A-A4A6-56C424F4B6E8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{3EFD040C-090C-4DFC-8C32-473239F596A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Butter.Models", "Butter.Models\Butter.Models.csproj", "{0A3FAB65-E3A0-4DCB-BBCB-28DD06B934A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +41,10 @@ Global
 		{0C201B54-B8BC-451A-A4A6-56C424F4B6E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C201B54-B8BC-451A-A4A6-56C424F4B6E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C201B54-B8BC-451A-A4A6-56C424F4B6E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A3FAB65-E3A0-4DCB-BBCB-28DD06B934A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A3FAB65-E3A0-4DCB-BBCB-28DD06B934A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A3FAB65-E3A0-4DCB-BBCB-28DD06B934A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A3FAB65-E3A0-4DCB-BBCB-28DD06B934A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +53,7 @@ Global
 		{4EB2DF27-8DD0-4744-90D2-4D8B8A950CFB} = {8606C320-9B71-4A7B-8EB2-86EF83BB76E5}
 		{D4C93413-7D32-4B0E-8688-04AE20F49EBB} = {8606C320-9B71-4A7B-8EB2-86EF83BB76E5}
 		{0C201B54-B8BC-451A-A4A6-56C424F4B6E8} = {8606C320-9B71-4A7B-8EB2-86EF83BB76E5}
+		{0A3FAB65-E3A0-4DCB-BBCB-28DD06B934A5} = {3EFD040C-090C-4DFC-8C32-473239F596A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D13427D1-2B4D-4D82-A3BE-5703C951E664}

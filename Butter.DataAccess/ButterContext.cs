@@ -13,6 +13,8 @@ namespace Butter.DataAccess
     {
         public DbSet<UserEntity> Users { get; set; }
         //DbSet<FriendEntity> Friends { get; set; }
+
+        
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Butter;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");

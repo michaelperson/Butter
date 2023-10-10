@@ -6,9 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Butter.DataAccess\Butter.DataAccess.csproj" />
-    <ProjectReference Include="..\Butter.Models\Butter.Models.csproj" />
-  </ItemGroup>
-
 </Project>

@@ -13,6 +13,7 @@ namespace Butter.DataAccess.Configs
     {
         public void Configure(EntityTypeBuilder<FriendEntity> builder)
         {
+            builder.ToTable("Friends");
             builder.Property(f => f.UserId)
                 .IsRequired();
             builder.Property(f => f.FriendId)
